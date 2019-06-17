@@ -103,7 +103,9 @@ const shuffle = arr => arr.sort(() => 0.5 - Math.random());
 ```
 * sort和 Math.random()结合
 ```js
-const shuffle = arr => arr.map(val => ({ val, ram: Math.random() })).sort((a, b) => a.ram - b.ram).map(item => item.val);
+const shuffle = arr => arr.map(val => ({ val, ram: Math.random() }))
+                          .sort((a, b) => a.ram - b.ram)
+                          .map(item => item.val);
 ```
 * Fisher–Yates乱序算法
  >核心原理就: 数组从后往前遍历，将当前元素与当前位置之前的随机位置的元素进行交换
